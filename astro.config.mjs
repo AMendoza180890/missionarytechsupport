@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import alpinejs from "@astrojs/alpinejs";
 import playformInline from "@playform/inline";
 import mdx from "@astrojs/mdx";
-import vercel from "@astrojs/vercel";
+import vercel from '@astrojs/vercel/serverless';
 
 import react from "@astrojs/react";
 
