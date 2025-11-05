@@ -4,7 +4,7 @@ import {Resend} from "resend";
 import GithubAccessTokenEmail from "~/emails/templateEmail";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
-s
+
 export const GET: APIRoute = async () => {
     // create the email
     const emailContent = GithubAccessTokenEmail({username: "Acme"});
