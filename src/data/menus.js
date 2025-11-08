@@ -25,8 +25,8 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Donate",
-        url: "/donate",
+        name: "Get Involved",
+        url: "/get-involved",
         highlighted: true,
     },
 ];
