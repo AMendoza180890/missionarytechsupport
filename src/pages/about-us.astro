@@ -5,49 +5,17 @@ import Article from "~/components/Article.astro";
 //eliminar
 import Hero from "~/components/Hero.astro";
 import { Picture } from "astro:assets";
-import Badge from "~/components/Badge.astro";
-
+// import Badge from "~/components/Badge.astro";
 
 import AboutUsHeader from "~/assets/img/Kallan.jpg";
 ---
-
 <Layout>
   <Section class:list={"bg-white"}>
     <Hero>
       <div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
         <h1 class="font-black">
-          God-given talents, given back to Him through service
+         Our Story
         </h1>
-
-        <p>
-          Connecting tech and media talents with ministry impact, empowering
-          nonprofits to accelerate positive change globally. Partnering with
-          nonprofit ministries around the world to provide general tech,
-          web-development, photography, and media support.
-        </p>
-
-      </div>
-      <div slot="hero-content-right">
-        <Picture
-          class:list={"mx-auto"}
-          src={AboutUsHeader}
-          height={600}
-          formats={["avif", "webp"]}
-          alt="A description of my image."
-          loading={"eager"}
-          fetchpriority={"high"}
-          style={{
-            border: "2px solid white",
-            borderRadius: "10px"
-          }}
-        />
-      </div>
-    </Hero>
-  </Section>
-
-  <Section class:list={"bg-white"}>
-    <Article>
-      <h2>Our Story</h2>
       <p>
         Our team is made up of a husband and wife duo, called to serve the Lord
         by serving His people. We believe that the Lord will use our skills to
@@ -78,6 +46,29 @@ import AboutUsHeader from "~/assets/img/Kallan.jpg";
         goal is to use our gifts to help bring about a lasting change on a
         global level, all for the glory of God.
       </p>
+
+      </div>
+      <div slot="hero-content-right">
+        <Picture
+          class:list={"mx-auto"}
+          src={AboutUsHeader}
+          height={600}
+          formats={["avif", "webp"]}
+          alt="A description of my image."
+          loading={"eager"}
+          fetchpriority={"high"}
+          style={{
+            border: "2px solid white",
+            borderRadius: "10px"
+          }}
+        />
+      </div>
+    </Hero>
+  </Section>
+
+  <Section class:list={"bg-white"}>
+    <Article>
+      
     </Article>
   </Section>
 </Layout>
