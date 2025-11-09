@@ -10,7 +10,7 @@ import { Picture } from "astro:assets";
 import AboutUsHeader from "~/assets/img/Kallan.jpg";
 ---
 <Layout>
-  <Section class:list={"bg-white"}>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Hero>
       <div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
         <h1 class="font-black">
@@ -64,11 +64,5 @@ import AboutUsHeader from "~/assets/img/Kallan.jpg";
         />
       </div>
     </Hero>
-  </Section>
-
-  <Section class:list={"bg-white"}>
-    <Article>
-      
-    </Article>
   </Section>
 </Layout>
