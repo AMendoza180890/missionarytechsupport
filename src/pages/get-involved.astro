@@ -1,7 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
-import Heading from "~/components/Heading.astro";
 import Tailblock from "~/components/Tailblock.astro";
 import Article from "~/components/Article.astro"
 
@@ -9,8 +8,10 @@ import Article from "~/components/Article.astro"
 ---
 
 <Layout>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}> 
+    <Tailblock/>
+  </Section>
 
-<Tailblock/>
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Article>
       <h3>Join Us</h3>
