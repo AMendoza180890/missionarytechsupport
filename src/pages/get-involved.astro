@@ -1,7 +1,6 @@
 ---
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
-import Heading from "~/components/Heading.astro";
 import Tailblock from "~/components/Tailblock.astro";
 import Article from "~/components/Article.astro"
 
@@ -9,21 +8,11 @@ import Article from "~/components/Article.astro"
 ---
 
 <Layout>
-  <!-- <Section>
-    <Heading>
-      <h1 slot="heading-title" class="font-black text-brand-green h2">
-        Get Involved
-      </h1>
-      <p slot="heading-content" class="text-pretty">
-        If you would like to get involved with what Missionary Tech Support is
-        doing, here are three ways to support:
-      </p>
-    </Heading>
-    <FormBook /> 
-  </Section> -->
+  <Section class:list={"container py-1 lg:py-1"} contain={false}> 
+    <Tailblock/>
+  </Section>
 
-<Tailblock/>
-  <Section>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Article>
       <h3>Join Us</h3>
         <p>

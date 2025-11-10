@@ -1,7 +1,7 @@
 // Global variables
 export const siteLang = "en-US";
 export const siteCurrency = "USD";
-export const siteDomain = "missionarytechsupport.com";
+export const siteDomain = "missionarytechsupport.org";
 export const siteName = "Missionary Tech Support";
 export const siteSlogan = "Supporting those most in need";
 export const themeColor = "#FF0000";
@@ -14,8 +14,8 @@ export const phone = {
 };
 
 export const email = {
-	href: "mailto:info@astropie.com",
-	label: "info@astropie.com",
+	href: "mailto:missionary2025techs@gmail.com",
+	label: "missionary2025techs@gmail.com",
 };
 
 export const address = {
