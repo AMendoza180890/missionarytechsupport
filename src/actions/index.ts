@@ -3,7 +3,6 @@ import { render } from "@react-email/render";
 import { Resend } from "resend";
 import GithubAccessTokenEmail from "~/emails/templateEmail";
 import { z } from "astro:schema";
-import { navigate } from "astro/virtual-modules/transitions-router.js";
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
@@ -35,11 +34,9 @@ export const server = {
         if (error) {
           throw error;
         }
-        if (data){
-           await navigate('/thank-you');
-        }
-      } catch (err) {
-        return new Response("Error interno del servidor", { status: 500 });
+        return data;
+      } catch (error) {
+        throw error;
       }
     },
   }),

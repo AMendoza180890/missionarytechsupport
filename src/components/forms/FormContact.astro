@@ -1,5 +1,5 @@
 ---
-import {actions} from "astro:actions";
+import { actions } from "astro:actions"
 ---
 
 <form action={actions.send} method="POST">
@@ -52,3 +52,24 @@ import {actions} from "astro:actions";
     </div>
   </div>
 </form>
+
+<script>
+  const form = document.querySelector('form');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (response.ok) {
+      window.location.href = '/thank-you';
+    } else {
+      alert('There was an error sending your message.');
+    }
+    
+  });
+</script>
