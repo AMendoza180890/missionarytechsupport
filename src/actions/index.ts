@@ -15,6 +15,7 @@ export const server = {
             message: z.string().min(10).max(300),
         }),
         handler: async ({name, email, message})=>{
+            try {
             const emailContent = GithubAccessTokenEmail({username: name, email: email, message: message});
             const html = await render(emailContent);
             const text = await render(emailContent, { plainText: true });
@@ -30,6 +31,9 @@ export const server = {
                 throw error;
             }
             return data;
+            } catch (error) {
+                throw error;
+            }
         }
     })
 }
