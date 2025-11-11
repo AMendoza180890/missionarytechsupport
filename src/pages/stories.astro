@@ -3,51 +3,55 @@ import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Heading from "~/components/Heading.astro";
 import { Picture } from "astro:assets";
-import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
 import Newsletter from "~/components/Newsletter.astro";
+import { getPostsInfo } from "~/lib/wp.ts";
+import Grid from "~/components/Grid.astro";
+// Images
+import itSupport from "~/assets/img/it-support.jpg";
+import webDeveloper from "~/assets/img/web-developer.jpg";
+import photographyMedia from "~/assets/img/photography-media.jpg";
+import Card from "~/components/Card.astro";
 
-const gallery = await getCollection("gallery");
+const posts = await getPostsInfo({ perPage: 3 });
 ---
 
 <Layout>
-	<Section class:list={"container py-1 lg:py-1"} contain={false}>
-		<Heading>
-			<h1 slot="heading-title" class="font-black h1">Stories</h1>
-			<p slot="heading-content">
-				At Missionary Tech Support, we believe that every project, mission trip, and act of service carries a story worth sharing. Through this blog, we open a window into the experiences, challenges, and testimonies of those who use technology to empower ministries around the world. Our goal is to inspire others to see how faith and innovation come together to make a lasting impact — one story at a time.
-			</p>
-		</Heading>
-	</Section>
-	<!-- <div class="masonry-grid grid grid-cols-2 lg:grid-cols-3 pb-16 lg:pb-32">
-		{
-			gallery.map((item, index) => (
-				<div class="masonry-grid-item">
-					<a href={item.data.image.src} class="glightbox">
-						<Picture
-							src={item.data.image}
-							alt={item.data.alt}
-							class="h-full w-full object-cover object-center"
-							loading={index < 3 ? "eager" : "lazy"}
-                            fetchpriority={index < 3 ? "high" : "auto"}
-						/>
-					</a>
-				</div>
-			))
-		}
-	</div> -->
-	<Newsletter/>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Heading>
+      <h1 slot="heading-title" class="font-black h1">Stories</h1>
+      <p slot="heading-content">
+        At Missionary Tech Support, we believe that every project, mission trip,
+        and act of service carries a story worth sharing. Through this blog, we
+        open a window into the experiences, challenges, and testimonies of those
+        who use technology to empower ministries around the world. Our goal is
+        to inspire others to see how faith and innovation come together to make
+        a lasting impact — one story at a time.
+      </p>
+    </Heading>
+  </Section>
+
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Grid>
+      <!-- {posts.map((post) => (<Card {...post} />))} -->
+      <div slot="grid-content-1">
+        <div class="flex flex-col items-center prose text-center">
+          <Picture
+            class:list={"not-prose w-full h-auto gridImg"}
+            src=""
+            formats={["avif", "webp"]}
+            alt="something"
+          />
+          <h3 class="h4 mt-0 font-black">text something </h3>
+          <p>
+            some description here
+          </p>
+        </div>
+      </div>
+    </Grid>
+  </Section>
+
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Newsletter />
+  </Section>
 </Layout>
-
-<script>
-	import GLightbox from "glightbox";
-	import "../../node_modules/glightbox/dist/css/glightbox.min.css";
-
-	document.addEventListener("astro:page-load", () => {
-		const lightbox = GLightbox({
-			touchNavigation: true,
-			autoplayVideos: true,
-			loop: true,
-			draggable: true,
-		});
-	});
-</script>
