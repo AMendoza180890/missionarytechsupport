@@ -39,7 +39,6 @@ export const server = {
            await navigate('/thank-you');
         }
       } catch (err) {
-        console.error("🚨 Error inesperado:", err);
         return new Response("Error interno del servidor", { status: 500 });
       }
     },
