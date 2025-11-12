@@ -2,35 +2,52 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Heading from "~/components/Heading.astro";
-import { Picture } from "astro:assets";
-import { getCollection } from "astro:content";
 import Newsletter from "~/components/Newsletter.astro";
+import { getLastestPost } from "~/lib/wp.ts";
+import Grid from "~/components/Grid.astro";
 
-const gallery = await getCollection("gallery");
+const posts = await getLastestPost({ perPage: 3 });
 ---
 
 <Layout>
-	<Section class:list={"container py-1 lg:py-1"} contain={false}>
-		<Heading>
-			<h1 slot="heading-title" class="font-black h1">Stories</h1>
-			<p slot="heading-content">
-				At Missionary Tech Support, we believe that every project, mission trip, and act of service carries a story worth sharing. Through this blog, we open a window into the experiences, challenges, and testimonies of those who use technology to empower ministries around the world. Our goal is to inspire others to see how faith and innovation come together to make a lasting impact — one story at a time.
-			</p>
-		</Heading>
-	</Section>
-	<Newsletter/>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Heading>
+      <h1 slot="heading-title" class="font-black h1">Stories</h1>
+      <p slot="heading-content">
+        At Missionary Tech Support, we believe that every project, mission trip,
+        and act of service carries a story worth sharing. Through this blog, we
+        open a window into the experiences, challenges, and testimonies of those
+        who use technology to empower ministries around the world. Our goal is
+        to inspire others to see how faith and innovation come together to make
+        a lasting impact — one story at a time.
+      </p>
+    </Heading>
+  </Section>
+
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Grid>
+      {
+        posts.map((info) => (
+          <div slot="grid-content-1">
+            <article class="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105">
+                <img
+                  class="w-full h-48 object-cover"
+                  src={info.featuredImage}
+                  alt={info.title}
+                />
+                <h5 class="text-xl font-bold mb-2 text-gaming-primary hover:text-gaming-secondary">
+					<a href={`/post/${info.slug}`}>{info.title}</a>
+				</h5>
+                <p class="text-black-600 text-sm mb-4">{info.date}</p>
+                <div class="text-gray-700" set:html={info.excerpt}></div>
+            </article>
+          </div>
+        ))
+      }
+    </Grid>
+  </Section>
+
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Newsletter />
+  </Section>
 </Layout>
-
-<script>
-	import GLightbox from "glightbox";
-	import "../../node_modules/glightbox/dist/css/glightbox.min.css";
-
-	document.addEventListener("astro:page-load", () => {
-		const lightbox = GLightbox({
-			touchNavigation: true,
-			autoplayVideos: true,
-			loop: true,
-			draggable: true,
-		});
-	});
-</script>
