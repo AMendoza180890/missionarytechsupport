@@ -1,18 +1,23 @@
 ---
-import { Picture } from "astro:assets";
+interface Props {
+  title: string;
+  excerpt: string;
+  featuredImage: string;
+  date: string;
+  slug: string;
+}
 const { title, excerpt, featuredImage, date, slug } = Astro.props;
 ---
 <div slot="grid-content-1">
   <div class="flex flex-col items-center prose text-center">
-    <Picture
+    <img
       class:list={"not-prose w-full h-auto gridImg"}
       src={featuredImage}
-      formats={["avif", "webp"]}
       alt={title}
     />
-    <h3 class="h4 mt-0 font-black">{title}</h3>
-    <p>
-      {excerpt}
-    </p>
+    <h3 class="h4 mt-0 font-black" set:html={title}></h3>
+    <p class="text-black-700" set:html={date}></p>
+    <p class="text-black-700" set:html={slug}></p>
+    <p class="text-black-700" set:html={excerpt}></p>
   </div>
 </div>

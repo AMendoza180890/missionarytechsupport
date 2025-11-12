@@ -2,18 +2,12 @@
 import Layout from "~/layouts/Layout.astro";
 import Section from "~/components/Section.astro";
 import Heading from "~/components/Heading.astro";
-import { Picture } from "astro:assets";
 // import { getCollection } from "astro:content";
 import Newsletter from "~/components/Newsletter.astro";
-import { getPostsInfo } from "~/lib/wp.ts";
+import { getLastestPost } from "~/lib/wp.ts";
 import Grid from "~/components/Grid.astro";
-// Images
-import itSupport from "~/assets/img/it-support.jpg";
-import webDeveloper from "~/assets/img/web-developer.jpg";
-import photographyMedia from "~/assets/img/photography-media.jpg";
-import Card from "~/components/Card.astro";
 
-const posts = await getPostsInfo({ perPage: 3 });
+const posts = await getLastestPost({ perPage: 3 });
 ---
 
 <Layout>
@@ -33,21 +27,24 @@ const posts = await getPostsInfo({ perPage: 3 });
 
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Grid>
-      <!-- {posts.map((post) => (<Card {...post} />))} -->
-      <div slot="grid-content-1">
-        <div class="flex flex-col items-center prose text-center">
-          <Picture
-            class:list={"not-prose w-full h-auto gridImg"}
-            src=""
-            formats={["avif", "webp"]}
-            alt="something"
-          />
-          <h3 class="h4 mt-0 font-black">text something </h3>
-          <p>
-            some description here
-          </p>
-        </div>
-      </div>
+      {
+        posts.map((info) => (
+          <div slot="grid-content-1">
+            <article class="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105">
+                <img
+                  class="w-full h-48 object-cover"
+                  src={info.featuredImage}
+                  alt={info.title}
+                />
+                <h5 class="text-xl font-bold mb-2 text-gaming-primary hover:text-gaming-secondary">
+					<a href={`/post/${info.slug}`}>{info.title}</a>
+				</h5>
+                <p class="text-black-600 text-sm mb-4">{info.date}</p>
+                <div class="text-gray-700" set:html={info.excerpt}></div>
+            </article>
+          </div>
+        ))
+      }
     </Grid>
   </Section>
 
