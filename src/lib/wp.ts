@@ -1,6 +1,8 @@
 const domain = import.meta.env.WORDPRESS_API_URL;
 const apiUrl = `${domain}/wp-json/wp/v2`;
 
+//TODO: Incluir GraphQL para optimizar las consultas.
+
 export const getLastestPost = async ({ perPage = 10 }: { perPage?: number }) => {
   const response = await fetch(`${apiUrl}/posts?per_page=${perPage}&_embed`);
 

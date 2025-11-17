@@ -35,4 +35,43 @@ const gallery = defineCollection({
 		}),
 });
 
-export const collections = { plates, reviews, gallery };
+const itsupport = defineCollection({
+	loader: file("src/data/itsupport.json"),
+	schema: ({ image }) =>
+		z.object({
+		id: z.number(),
+		title: z.string(),
+		image: image(),
+		alt: z.string(),
+		url: z.string(),
+		description: z.string(),
+	}),
+});
+
+const storytelling = defineCollection({
+	loader: file("src/data/historyteller.json"),
+	schema: ({ image }) =>
+		z.object({
+		id: z.number(),
+		title: z.string(),
+		image: image(),
+		alt: z.string(),
+		url: z.string(),
+		description: z.string(),
+	}),
+});
+
+const photography = defineCollection({
+	loader: file("src/data/photograph.json"),
+	schema: ({ image }) =>
+		z.object({
+		id: z.number(),
+		title: z.string(),
+		image: image(),
+		alt: z.string(),
+		url: z.string(),
+		description: z.string(),
+	}),
+});
+
+export const collections = { plates, reviews, gallery, itsupport, storytelling, photography };
