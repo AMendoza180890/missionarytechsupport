@@ -6,7 +6,7 @@ import Newsletter from "~/components/Newsletter.astro";
 import { getLastestPost } from "~/lib/wp.ts";
 import Grid from "~/components/Grid.astro";
 
-const posts = await getLastestPost({ perPage: 3 });
+const posts = await getLastestPost({ perPage: 20 });
 ---
 
 <Layout>
