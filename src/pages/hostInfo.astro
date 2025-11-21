@@ -6,9 +6,9 @@ import Grid from "~/components/Grid.astro";
 import { Picture } from "astro:assets";
 
 // Importando Imagenes
-import itSupport from "~/assets/img/it-support.jpg";
-import webDevelopment from "~/assets/img/web-developer.jpg";
-import photographyMedia from "~/assets/img/photography-media.jpg";
+import itSupport from "~/assets/img/it-portfolio.jpg";
+import photographyMedia from "~/assets/img/photo-portfolio.jpg";
+import storyTelling from "~/assets/img/mts-storytelling.jpg";
 ---
 
 <Layout>
@@ -55,7 +55,7 @@ import photographyMedia from "~/assets/img/photography-media.jpg";
         <div class="relative flex flex-col items-center prose text-center">
           <Picture
             class:list={"not-prose w-full h-auto gridImg"}
-            src={webDevelopment}
+            src={photographyMedia}
             formats={["avif", "webp"]}
             alt="Photography Portfolio"
           />
@@ -73,7 +73,7 @@ import photographyMedia from "~/assets/img/photography-media.jpg";
 			<div class="relative flex flex-col items-center prose text-center">
 			  <Picture
 				class:list={"not-prose w-full h-auto gridImg"}
-				src={photographyMedia}
+				src={storyTelling}
 				formats={["avif", "webp"]}
 				alt="Storytelling Portfolio"
 			  />
