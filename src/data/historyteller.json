@@ -2,7 +2,7 @@
 	{
 		"id": 1,
 		"title": "Tesoros de Dios - Website",
-		"image": "/src/assets/portfolio/itsupport/tesorosdeDiosWebsite.jpg",
+		"image": "/src/assets/portfolio/itsupport/tesoroswebsite.webp",
 		"alt": "Tesoros de Dios - Website",
         "url": "https://tesorosdedios.org/",
         "description": "Deveoped a website for Tesoros de Dios, a non-profit organization dedicated to providing educational resources and support to underprivileged children in Latin America."
@@ -10,7 +10,7 @@
 	{
 		"id": 2,
 		"title": "Tesoros de Dios - Library system",
-		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.jpg",
+		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.webp",
 		"alt": "Tesoros de Dios - Library system",
         "url": "https://www.biblioteca.tesorosdedios.org/ingreso",
         "description": "This is a system to manage the library of Tesoros de Dios organization, allowing users to search, borrow, and return books efficiently."

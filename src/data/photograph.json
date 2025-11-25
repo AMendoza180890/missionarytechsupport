@@ -18,7 +18,7 @@
 	{
 		"id": 3,
 		"title": "Africa",
-		"image": "/src/assets/portfolio/itsupport/tesorosdeDiosWebsite.jpg",
+		"image": "/src/assets/portfolio/itsupport/tesoroswebsite.webp",
 		"alt": "Picture took in Africa during my World Race, eleven countries in eleven month",
         "url": "#",
         "description": "Photography from Impact Africa’s schools ministry and evangelistic visits to squatter villages in Johannesburg, South Africa."
@@ -42,7 +42,7 @@
 	{
 		"id": 6,
 		"title": "El Salvador",
-		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.jpg",
+		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.webp",
 		"alt": "A Picture took in El Salvador during World Race, eleven countries in eleven month",
         "url": "#",
         "description": "Photography from school and church visits in San Salvador, El Salvador with Global Passions."
