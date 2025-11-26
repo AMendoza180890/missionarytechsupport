@@ -32,6 +32,7 @@ const storytelling = await getCollection("storytelling");
               <Picture
                 class="w-full h-48 object-cover"
                 src={info.data.image}
+                formats={["avif", "webp"]}
                 alt={info.data.alt}
                 title={info.data.title}
               />

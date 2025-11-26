@@ -1,50 +1,66 @@
 [
 	{
 		"id": 1,
-		"title": "Tesoros de Dios - Website",
-		"image": "/src/assets/portfolio/itsupport/tesoroswebsite.webp",
-		"alt": "Tesoros de Dios - Website",
-        "url": "https://tesorosdedios.org/",
-        "description": "Deveoped a website for Tesoros de Dios, a non-profit organization dedicated to providing educational resources and support to underprivileged children in Latin America."
+		"title": "Consider the Lilies",
+		"image": "/src/assets/portfolio/storytelling/afirst.webp",
+		"alt": "Consider the Lilies",
+        "url": "#",
+        "description": "A story of how the Lord taught me that He has a plan for my life, written before starting the World Race."
 	},
 	{
 		"id": 2,
-		"title": "Tesoros de Dios - Library system",
-		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.webp",
-		"alt": "Tesoros de Dios - Library system",
-        "url": "https://www.biblioteca.tesorosdedios.org/ingreso",
-        "description": "This is a system to manage the library of Tesoros de Dios organization, allowing users to search, borrow, and return books efficiently."
+		"title": "Goodbye Guatemala",
+		"image": "/src/assets/portfolio/storytelling/bsecond.webp",
+		"alt": "Goodbye Guatemala",
+        "url": "#",
+        "description": "A story of how the Lord used the events we hosted in Guatemala to heal the hearts of His people."
 	},
 	{
 		"id": 3,
-		"title": "pexels-enginakyurt",
-		"image": "/src/assets/images/gallery/pexels-enginakyurt-1487511.jpg",
-		"alt": "pexels-enginakyurt-1487511",
+		"title": "Silly Little Man-Made Limits",
+		"image": "/src/assets/portfolio/storytelling/cthird.webp",
+		"alt": "Silly Little Man-Made Limits",
         "url": "#",
-        "description": "Sample description for pexels-enginakyurt"
+	"description": "A story of how the Lord spoke to me through an experience with a child and healed my heart in Honduras."
 	},
 	{
 		"id": 4,
-		"title": "pexels-fariphotography",
-		"image": "/src/assets/images/gallery/pexels-fariphotography-905847.jpg",
-		"alt": "pexels-fariphotography-905847",
+		"title": "Casa Esperanza - House of Hope",
+		"image": "/src/assets/portfolio/storytelling/dfouth.webp",
+		"alt": "Casa Esperanza - House of Hope",
         "url": "#",
-        "description": "Sample description for pexels-fariphotography"
+        "description": "A story of the ways the Lord used my team at House of Hope, a shelter for women and children in Nicaragua."
 	},
 	{
 		"id": 5,
-		"title": "pexels-narda-yescas",
-		"image": "/src/assets/images/gallery/pexels-narda-yescas-724842-1566837.jpg",
-		"alt": "pexels-narda-yescas-724842-1566837",
+		"title": "To Be Treasured",
+		"image": "/src/assets/portfolio/storytelling/ffifth.webp",
+		"alt": "To Be Treasured",
         "url": "#",
-        "description": "Sample description for pexels-narda-yescas"
+        "description": "A story of how the Lord showed me that He could use my creative gifts for His Kingdom in Nicaragua."
 	},
 	{
 		"id": 6,
-		"title": "pexels-pixabay",
-		"image": "/src/assets/images/gallery/pexels-pixabay-262978.jpg",
-		"alt": "pexels-pixabay-262978",
+		"title": "Shadrach, Putin, And My Super Cool Ukrainian Friend",
+		"image": "/src/assets/portfolio/storytelling/gsix.webp",
+		"alt": "Shadrach, Putin, And My Super Cool Ukrainian Friend",
         "url": "#",
-        "description": "Sample description for pexels-pixabay"
+        "description": "A story of how the Lord used Shadrach and Putin to teach me about forgiveness."
+	},
+	{
+		"id": 7,
+		"title": "Last Stop: Swaziland",
+		"image": "/src/assets/portfolio/storytelling/hseven.webp",
+		"alt": "Last Stop: Swaziland",
+        "url": "#",
+        "description": "A story of how the Lord used jewelry to share the gospel with children in Swaziland."
+	},
+	{
+		"id": 8,
+		"title": "27 Doctors, 21 Translators, 487 Prostitutes, & Me",
+		"image": "/src/assets/portfolio/storytelling/ieight.webp",
+		"alt": "27 Doctors, 21 Translators, 487 Prostitutes, & Me",
+        "url": "#",
+        "description": "A story of how the Lord used a medical brigade to share His love with almost 500 prostitutes in Nicaragua."
 	}
 ]

@@ -2,48 +2,48 @@
 	{
 		"id": 1,
 		"title": "Nicaragua - House of Hope",
-		"image": "/src/assets/images/gallery/pexels-narda-yescas-724842-1566837.jpg",
-		"alt": "A Picture took in Nicaragua, serving in House of Hope, a non profit,  during World Race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover5.webp",
+		"alt": "Nicaragua - House of Hope",
         "url": "#",
-        "description": "Sample description for pexels-narda-yescas"
+        "description": "Photography from House of Hope, a shelter for women and children out of sex trafficking and prostitution in Managua, Nicaragua."
 	},
 	{
 		"id": 2,
 		"title": "Guatemala",
-		"image": "/src/assets/images/gallery/pexels-enginakyurt-1487511.jpg",
-		"alt": "A picture took in Guatemala during world race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover3.webp",
+		"alt": "Guatemala",
         "url": "#",
         "description": "Photography from children’s ministry with Casa Church in Mixco, Guatemala."
 	},
 	{
 		"id": 3,
 		"title": "Africa",
-		"image": "/src/assets/portfolio/itsupport/tesoroswebsite.webp",
-		"alt": "Picture took in Africa during my World Race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover1.webp",
+		"alt": "Africa",
         "url": "#",
         "description": "Photography from Impact Africa’s schools ministry and evangelistic visits to squatter villages in Johannesburg, South Africa."
 	},
 	{
 		"id": 4,
 		"title": "Honduras",
-		"image": "/src/assets/images/gallery/pexels-fariphotography-905847.jpg",
-		"alt": "A picture took in Honduras during world race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover4.webp",
+		"alt": "Honduras",
         "url": "#",
         "description": "Photography from a construction project and children’s ministry on the side of a mountain in Comayagua, Honduras with Catracho Ministries."
 	},
 	{
 		"id": 5,
 		"title": "Nicaragua - Tesoros de Dios",
-		"image": "/src/assets/images/gallery/pexels-pixabay-262978.jpg",
-		"alt": "A Picture took in Nicaragua, serving in Tesoros de Dios, a non profit,  during World Race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover6.webp",
+		"alt": "Nicaragua - Tesoros de Dios",
         "url": "#",
-        "description": "Sample description for pexels-pixabay"
+        "description": "Photography from Tesoro’s de Dios, a ministry devoted to serving children with disabilities through physical therapy, horse therapy, and education in Managua, Nicaragua."
 	},
 	{
 		"id": 6,
 		"title": "El Salvador",
-		"image": "/src/assets/portfolio/itsupport/Bibliotecatesorosdedios.webp",
-		"alt": "A Picture took in El Salvador during World Race, eleven countries in eleven month",
+		"image": "/src/assets/portfolio/photograph/cover2.webp",
+		"alt": "El Salvador",
         "url": "#",
         "description": "Photography from school and church visits in San Salvador, El Salvador with Global Passions."
 	}
