@@ -1,0 +1,45 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Heading from "~/components/Heading.astro";
+import { getCollection } from "astro:content";
+// import { getCollection } from "astro:content";
+
+const story = Astro.params.title;
+if (!story) {
+  return Astro.redirect("/404");
+}
+
+const storytelling = await getCollection("story");
+console.log(storytelling.filter((item)=>item.data.slug === story).map((x)=> x.data.title))
+---
+
+<Layout>
+  <Section class:list={"container pb-20 py-1 lg:py-1,pb-0"} contain={false}>
+      {
+        storytelling
+          .filter((item) => item.data.slug === story)
+          .map((infoStory) => (
+            <Heading>
+			    <h1 slot="heading-title" class="font-black h1">{infoStory.data.title}</h1>
+		    </Heading>
+
+            <div class="mx-auto max-w-3xl text-justify whitespace-pre-line">
+                <p>{infoStory.data.body}</p>
+            </div>
+          ))
+      }
+  </Section>
+  <Section
+    class:list={"container pb-20 py-1 lg:py-1,pb-0,pt-0 flex justify-center"}
+    id="contenedor"
+    contain={false}
+  >
+    <a
+      class="inline-flex items-center gap-2 rounded-sm border border-green-600 bg-green-600 px-8 py-3 text-white hover:bg-transparent hover:text-green-600"
+      href="/storytelling"
+    >
+      <span class="text-sm font-medium"> return </span>
+    </a>
+  </Section>
+</Layout>

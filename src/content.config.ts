@@ -74,4 +74,15 @@ const photography = defineCollection({
 	}),
 });
 
-export const collections = { plates, reviews, gallery, itsupport, storytelling, photography };
+const story = defineCollection({
+	loader: file("src/data/story.json"),
+	schema: ({ image }) =>
+		z.object({
+		id: z.number(),
+		title: z.string(),
+		slug: z.string(),
+		body: z.string(),
+	}),
+})
+
+export const collections = { plates, reviews, gallery, itsupport, storytelling, photography, story };

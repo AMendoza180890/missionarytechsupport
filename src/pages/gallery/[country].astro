@@ -1,0 +1,54 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Heading from "~/components/Heading.astro";
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+// import { getCollection } from "astro:content";
+
+
+const country = Astro.params.country;
+if (!country) {
+    return Astro.redirect("/404");
+}
+
+const gallery = await getCollection("gallery");
+---
+<Layout>
+	<Section class:list={"[&>.container]:pb-0"}>
+		<Heading>
+			<h1 slot="heading-title" class="font-black h1">Gallery</h1>
+		</Heading>
+	</Section>
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+		{
+			gallery.filter(item=>item.data.title === country ).map((item, index) => (
+				<div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
+					<a href={item.data.image.src} class="glightbox">
+						<Picture
+							src={item.data.image}
+							alt={item.data.alt}
+							class="w-full h-48 object-cover"
+							loading={index < 3 ? "eager" : "lazy"}
+                            fetchpriority={index < 3 ? "high" : "auto"}
+						/>
+					</a>
+				</div>
+			))
+		}
+	</div>
+</Layout>
+
+<script>
+	import GLightbox from "glightbox";
+	import "../../../node_modules/glightbox/dist/css/glightbox.min.css";
+
+	document.addEventListener("astro:page-load", () => {
+		const lightbox = GLightbox({
+			touchNavigation: true,
+			autoplayVideos: true,
+			loop: true,
+			draggable: true,
+		});
+	});
+</script>

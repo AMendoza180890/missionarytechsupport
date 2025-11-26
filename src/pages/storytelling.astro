@@ -37,7 +37,7 @@ const storytelling = await getCollection("storytelling");
                 title={info.data.title}
               />
               <h5 class="text-xl font-bold mb-2 text-gaming-primary hover:text-gaming-secondary">
-                <a href={info.data.url} title={info.data.title}>
+                <a href={`/story/${info.data.url}`} title={info.data.title}>
                   {info.data.title}
                 </a>
               </h5>
