@@ -6,49 +6,66 @@ import { getCollection } from "astro:content";
 import { Picture } from "astro:assets";
 // import { getCollection } from "astro:content";
 
-
 const country = Astro.params.country;
 if (!country) {
-    return Astro.redirect("/404");
+  return Astro.redirect("/404");
 }
 
 const gallery = await getCollection("gallery");
+const filtered = gallery.filter((item) => item.data.title === country);
 ---
+
 <Layout>
-	<Section class:list={"[&>.container]:pb-0"}>
-		<Heading>
-			<h1 slot="heading-title" class="font-black h1">Gallery</h1>
-		</Heading>
-	</Section>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-		{
-			gallery.filter(item=>item.data.title === country ).map((item, index) => (
-				<div class="overflow-hidden rounded-lg shadow hover:shadow-lg transition">
-					<a href={item.data.image.src} class="glightbox">
-						<Picture
-							src={item.data.image}
-							alt={item.data.alt}
-							class="w-full h-48 object-cover"
-							loading={index < 3 ? "eager" : "lazy"}
-                            fetchpriority={index < 3 ? "high" : "auto"}
-						/>
-					</a>
-				</div>
-			))
-		}
-	</div>
+  <Section class:list={"[&>.container]:pb-0"}>
+    <Heading>
+      <h1 slot="heading-title" class="font-black h1">Gallery</h1>
+    </Heading>
+  </Section>
+  <Section>
+      <div class="columns-1 sm:columns-2 md:columns-3 gap-4">
+        {
+          filtered.map((item, index) => (
+            <div class="mb-4 break-inside-avoid">
+              <a href={item.data.image.src} class="glightbox">
+                <Picture
+                  src={item.data.image}
+                  alt={item.data.alt}
+                  class="w-full h-auto rounded-lg object-cover object-center"
+                  loading={index < 3 ? "eager" : "lazy"}
+                  fetchpriority={index < 3 ? "high" : "auto"}
+                />
+              </a>
+            </div>
+          ))
+        }
+      </div>
+  </Section>
+  
+  <Section
+    class:list={"container pt-0 pb-20 py-1 lg:py-1,pb-0,pt-0 flex justify-center"}
+    id="contenedor"
+    contain={false}
+  >
+    <a
+      class="inline-flex items-center gap-2 rounded-sm border border-green-600 bg-green-600 px-8 py-3 text-white hover:bg-transparent hover:text-green-600"
+      href="/Photography"
+    >
+      <span class="text-sm font-medium"> return </span>
+    </a>
+  </Section>
+
 </Layout>
 
 <script>
-	import GLightbox from "glightbox";
-	import "../../../node_modules/glightbox/dist/css/glightbox.min.css";
+  import GLightbox from "glightbox";
+  import "../../../node_modules/glightbox/dist/css/glightbox.min.css";
 
-	document.addEventListener("astro:page-load", () => {
-		const lightbox = GLightbox({
-			touchNavigation: true,
-			autoplayVideos: true,
-			loop: true,
-			draggable: true,
-		});
-	});
+  document.addEventListener("astro:page-load", () => {
+    const lightbox = GLightbox({
+      touchNavigation: true,
+      autoplayVideos: true,
+      loop: true,
+      draggable: true,
+    });
+  });
 </script>
