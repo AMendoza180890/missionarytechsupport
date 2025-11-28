@@ -13,7 +13,6 @@ import slide from "~/assets/index/mtsslide.webp";
 import itSupport from "~/assets/index/mtsitsupport.webp";
 import webDeveloper from "~/assets/index/itsupport2.webp";
 import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
-
 ---
 
 <Layout
@@ -30,8 +29,8 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
         <p>
           Connecting tech and media talents with ministry impact, empowering
           nonprofits to accelerate positive change globally. Partnering with
-          ministries around the world to provide general tech,
-          web-development, photography, and media support.
+          ministries around the world to provide general tech, web-development,
+          photography, and media support.
         </p>
       </div>
     </section>
@@ -41,6 +40,7 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
     image={slide}
     alt="Group of friends helping people"
     class:list={"aspect-video lg:aspect-[16/6]"}
+    fetchpriority="high"
   />
 
   <Section class:list={"bg-white"}>
@@ -65,6 +65,8 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
             src={itSupport}
             formats={["avif", "webp"]}
             alt="IT support"
+            loading="lazy"
+            fetchpriority="auto"
           />
           <h3 class="h4 mt-0 font-black">IT Support</h3>
           <p>
@@ -84,6 +86,8 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
             src={webDeveloper}
             formats={["avif", "webp"]}
             alt="Web Development"
+            loading="lazy"
+fetchpriority="auto"
           />
           <h3 class="h4 mt-0 font-black">Web Development</h3>
           <p>
@@ -102,6 +106,8 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
             src={photographyMedia}
             formats={["avif", "webp"]}
             alt="Photography and media"
+            loading="lazy"
+fetchpriority="auto"
           />
           <h3 class="h4 mt-0 font-black">Photography & Media</h3>
           <p>
@@ -119,7 +125,9 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
   <!-- Logos -->
   <Section class:list={"bg-brand-green relative"}>
     <div class="py-0">
-      <LogoCloud title="We have served many incredible non-profits including:" />
+      <LogoCloud
+        title="We have served many incredible non-profits including:"
+      />
     </div>
 
     <svg
@@ -145,7 +153,6 @@ import photographyMedia from "~/assets/index/mtsphotographymedia.webp";
       ></path>
     </svg>
   </Section>
-  
 
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Newsletter />
