@@ -12,90 +12,104 @@ import photographyMedia from "~/assets/hostinfo/photoportfolio.webp";
 ---
 
 <Layout>
-	<Section class:list={"container py-1 lg:py-1"} contain={false}>
-		<Heading>
-			<h1 slot="heading-title" class="font-black h1">Host Information</h1>
-			<p slot="heading-content">
-				If you are interested in working with our team, please reach out to let us know about your ministry, the current needs, and how we can help. Understanding this information allows us to identify your needs in IT support and multimedia, ensuring our assistance aligns with your goals. This collaboration aims to strengthen your operations through effective and sustainable solutions.
-			</p>
-		</Heading>
-	</Section>
-	
-	<Section class:list={"container pb-20 py-1 lg:py-1,pb-0"} contain={false}>
-		<Heading>
-			<h2 slot="heading-title" class="font-black text-brand-green h2">
-				Portfolios
-			</h2>
-			<p slot="heading-content">
-				Check out our previous work
-			</p>
-		</Heading>
-	<Grid>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Heading>
+      <h1 slot="heading-title" class="font-black h1">Host Information</h1>
+      <p slot="heading-content">
+        If you are interested in working with our team, please reach out to let
+        us know about your ministry, the current needs, and how we can help.
+        Understanding this information allows us to identify your needs in IT
+        support and multimedia, ensuring our assistance aligns with your goals.
+        This collaboration aims to strengthen your operations through effective
+        and sustainable solutions.
+      </p>
+    </Heading>
+  </Section>
+
+  <Section class:list={"container pb-20 py-1 lg:py-1,pb-0"} contain={false}>
+    <Heading>
+      <h2 slot="heading-title" class="font-black text-brand-green h2">
+        Portfolios
+      </h2>
+      <p slot="heading-content">Check out our previous work</p>
+    </Heading>
+    <Grid>
       <div slot="grid-content-1">
-		<div class="hover:scale-105 hover:shadow-1xs transition duration-300">	
-			<a href="/itsupport">
-			<div class="relative flex flex-col items-center prose text-center">
-			  <Picture
-				class:list={"not-prose w-full h-auto gridImg"}
-				src={itSupport}
-				formats={["avif", "webp"]}
-				alt="IT support"
-			  />
-			  <div class="absolute inset-0 flex items-center justify-center">
-				  <h3 class="h4 mt-0 font-black shadow-text-border">Tech Portfolio</h3>
-			  </div>
-			</div>
-			</a>
-		</div>
+        <div class="hover:scale-105 hover:shadow-1xs transition duration-300">
+          <a href="/itsupport">
+            <div class="relative flex flex-col items-center prose text-center">
+              <Picture
+                class:list={"not-prose w-full h-auto gridImg"}
+                src={itSupport}
+                formats={["avif", "webp"]}
+                alt="IT support"
+                loading="lazy"
+                fetchpriority="auto"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h3 class="h4 mt-0 font-black shadow-text-border">
+                  Tech Portfolio
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
 
       <div slot="grid-content-2">
-		<div class="hover:scale-105 hover:shadow-1xs transition duration-300">
-		<a href="/Photography">
-        <div class="relative flex flex-col items-center prose text-center">
-          <Picture
-            class:list={"not-prose w-full h-auto gridImg"}
-            src={photographyMedia}
-            formats={["avif", "webp"]}
-            alt="Photography Portfolio"
-          />
-		  <div class="absolute inset-0 flex items-center justify-center">
-			  <h3 class="h4 mt-0 font-black  shadow-text-border">Photography Portfolio</h3>
-		  </div>
+        <div class="hover:scale-105 hover:shadow-1xs transition duration-300">
+          <a href="/Photography">
+            <div class="relative flex flex-col items-center prose text-center">
+              <Picture
+                class:list={"not-prose w-full h-auto gridImg"}
+                src={photographyMedia}
+                formats={["avif", "webp"]}
+                alt="Photography Portfolio"
+                loading="lazy"
+                fetchpriority="auto"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h3 class="h4 mt-0 font-black shadow-text-border">
+                  Photography Portfolio
+                </h3>
+              </div>
+            </div>
+          </a>
         </div>
-		</a>
-		</div>
       </div>
 
       <div slot="grid-content-3">
-		<div class="hover:scale-105 hover:shadow-1xs transition duration-300">	
-			<a href="/storytelling">
-			<div class="relative flex flex-col items-center prose text-center">
-			  <Picture
-				class:list={"not-prose w-full h-auto gridImg"}
-				src={storyTelling}
-				formats={["avif", "webp"]}
-				alt="Storytelling Portfolio"
-			  />
-			  <div class="absolute inset-0 flex items-center justify-center">
-				  <h3 class="h4 mt-0 font-black shadow-text-border">Storytelling Portfolio</h3>
-			  </div>
-			</div>
-			</a>
-		</div>
+        <div class="hover:scale-105 hover:shadow-1xs transition duration-300">
+          <a href="/storytelling">
+            <div class="relative flex flex-col items-center prose text-center">
+              <Picture
+                class:list={"not-prose w-full h-auto gridImg"}
+                src={storyTelling}
+                formats={["avif", "webp"]}
+                alt="Storytelling Portfolio"
+                loading="lazy"
+                fetchpriority="auto"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h3 class="h4 mt-0 font-black shadow-text-border">
+                  Storytelling Portfolio
+                </h3>
+              </div>
+            </div>
+          </a>
+        </div>
       </div>
     </Grid>
   </Section>
 </Layout>
 
-
 <style>
-.shadow-text-border{
-	color: white;
-  text-shadow:
-   -1px -1px 0 #000,  
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-     1px 1px 0 #000;
-}
+  .shadow-text-border {
+    color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
 </style>
