@@ -10,7 +10,7 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Host info",
+        name: "Host Info",
         url: "/hostInfo",
         highlighted: false,
     },
