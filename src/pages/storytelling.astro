@@ -26,7 +26,7 @@ const storytelling = await getCollection("storytelling");
   >
     <Grid>
       {
-        storytelling.map((info) => (
+        storytelling.sort((a, b) => a.data.id - b.data.id).map((info) => (
           <div slot="grid-content-1">
             <article class="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105">
               <Picture
