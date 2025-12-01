@@ -25,7 +25,7 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Support",
+        name: "Ways to Support",
         url: "/support",
         highlighted: false,
     },
