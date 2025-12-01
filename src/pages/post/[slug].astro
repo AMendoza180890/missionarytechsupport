@@ -19,7 +19,7 @@ const { title, content } = await getPostInfo(slug);
 <Layout title={title}>
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <article class="prose lg:prose-xl mx-auto">
-      <h1 class="font-black">{title}</h1>
+      <h1 class="font-black text-center ">{title}</h1>
         <div class="text-gray-700" set:html={content}></div>
     </article>
     </Section>
