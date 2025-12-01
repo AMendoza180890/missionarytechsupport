@@ -13,7 +13,7 @@ import { siteName, firstTitle, secondTitle } from "~/data/config";
 		<nav class="flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-3 font-medium mt-6" aria-label="Footer">
 			{
 				menuMain.map((item) => (
-					<a href={item.url} class="hover:underline">
+					<a href={item.url} class="hover:underline" target = {item.highlighted ? `"_blank"` : ""}>
 						{item.name}
 					</a>
 				))
