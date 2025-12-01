@@ -25,8 +25,13 @@ export const menuMain = [
         highlighted: false,
     },
     {
-        name: "Get Involved",
-        url: "/get-involved",
+        name: "Support",
+        url: "/support",
+        highlighted: false,
+    },
+    {
+        name: "Donate",
+        url: "https://www.givesendgo.com/missionarytechsupport",
         highlighted: true,
     },
 ];
