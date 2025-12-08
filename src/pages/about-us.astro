@@ -5,7 +5,13 @@ import Hero from "~/components/Hero.astro";
 import { Picture } from "astro:assets";
 import AboutUsHeader from "~/assets/about/Kallan.webp";
 ---
-<Layout>
+<Layout
+  title="About Us"
+  pageTitle="About Us"
+  description="Our Story, Our team is made up of a husband and wife duo, called to serve the Lord
+        by serving His people. We believe that the Lord will use our skills to
+        empower His ministries around the world."  
+>
   <Section class:list={"container pb-20 py-1 lg:py-1,pb-0"} contain={false}>
     <Hero>
       <div slot="hero-content-left" class="prose max-w-none max-lg:order-1">
