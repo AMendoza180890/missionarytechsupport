@@ -15,7 +15,7 @@ export const getLastestPost = async ({ perPage = 10 }: { perPage?: number }) => 
         throw new Error('No posts found');
     }
 
-    const posts = result.map(post => {
+    const posts = result.map((post: { _embedded?: any; title?: any; content?: any; excerpt?: any; date?: string; slug?: string; }) => {
         const {
             title: { rendered: title }, 
             content: { rendered: content }, 
