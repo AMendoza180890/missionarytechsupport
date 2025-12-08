@@ -31,7 +31,7 @@ const posts = await getLastestPost({ perPage: 20 });
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Grid>
       {
-        posts.map((info) => (
+        posts.map((info: typeof posts[number]) => (
           <div slot="grid-content-1">
             <article class="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105">
                 <img
