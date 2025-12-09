@@ -11,14 +11,13 @@ if (!country) {
 }
 
 const gallery = await getCollection("gallery");
-const photograph = await getCollection("photograph");
 const filtered = gallery.filter((item) => item.data.title === country);
 ---
 
 <Layout>
   <Section class:list={"[&>.container]:pb-0"}>
     <Heading>
-      <h1 slot="heading-title" class="font-black h1">Gallery from {title}</h1>
+      <h1 slot="heading-title" class="font-black h1">Gallery</h1>
     </Heading>
   </Section>
   <Section>
