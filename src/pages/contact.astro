@@ -1,0 +1,26 @@
+---
+import Layout from "~/layouts/Layout.astro";
+import Section from "~/components/Section.astro";
+import Heading from "~/components/Heading.astro";
+import FormContact from "~/components/forms/FormContact.astro";
+---
+
+<Layout>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Heading>
+      <h1 slot="heading-title" class="font-black h1">Get in Touch</h1>
+      <p slot="heading-content">
+        We’d love to hear from you! Whether you have questions about our
+        services, want to partner with us, or simply wish to learn more about
+        how technology can support your ministry, our team is here to help.
+        Reach out to us today — together, we can find the right solutions to
+        empower your mission and make a greater impact.
+      </p>
+    </Heading>
+  </Section>
+
+  <Section class:list={"container pb-20 py-1 lg:py-1,pb-0"} contain={false}>
+    <FormContact />
+  </Section>
+  
+</Layout>
