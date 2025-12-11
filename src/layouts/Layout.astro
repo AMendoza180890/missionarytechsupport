@@ -20,13 +20,19 @@ import { siteLang, themeColor } from "~/data/config";
 		<meta name="googlebot" content="index,follow" />
 		<link rel="icon" type="image/x-icon" href="/MTS.ico" />
 		<meta name="msapplication-TileColor" content="#ffffff" />
+		<link rel="canonical" href={Astro.url} />
+		
+		<!-- Graph Meta Tags -->
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={title} />
 		<meta property="og:image" content={`${baseUrl}/images/logoMTS-og.png`} />
+		<meta property="og:image:alt" content="Missionary Tech Support Logo" />
 		<meta property="og:description" content={description} />
 		<meta property="og:site_name" content="Missionary Tech Support" />
 		<meta property="og:locale" content={siteLang} />
+
+		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:url" content={Astro.url} />
 		<meta name="twitter:title" content={title} />

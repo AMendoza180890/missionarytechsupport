@@ -21,7 +21,7 @@ const filtered = gallery.filter((item) => item.data.title === country);
     </Heading>
   </Section>
   <Section>
-      <div class="columns-1 sm:columns-2 md:columns-3 gap-4">
+      <section class="columns-1 sm:columns-2 md:columns-3 gap-4">
         {
           filtered.map((item, index) => (
             <div class="mb-4 break-inside-avoid">
@@ -37,7 +37,7 @@ const filtered = gallery.filter((item) => item.data.title === country);
             </div>
           ))
         }
-      </div>
+      </section>
   </Section>
   
   <Section

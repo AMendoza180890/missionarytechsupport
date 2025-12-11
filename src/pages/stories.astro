@@ -13,7 +13,7 @@ const posts = await getLastestPost({ perPage: 20 });
   title="Stories"
   pageTitle="Stories"
   description="This blog shares the ongoing work and stories of organizations and communities making a meaningful difference around the world. Each post highlights real initiatives, local efforts, and collaborative projects that inspire positive change. Through reflections, updates, and on-the-ground perspectives, this space offers a closer look at the people and partnerships driving impact in their communities."
-  >
+>
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Heading>
       <h1 slot="heading-title" class="font-black h1">Stories</h1>
@@ -31,19 +31,19 @@ const posts = await getLastestPost({ perPage: 20 });
   <Section class:list={"container py-1 lg:py-1"} contain={false}>
     <Grid>
       {
-        posts.map((info: typeof posts[number]) => (
+        posts.map((info: (typeof posts)[number]) => (
           <div slot="grid-content-1">
             <article class="bg-white rounded-lg overflow-hidden transition-transform hover:scale-105">
-                <img
-                  class="w-full h-48 object-cover"
-                  src={info.featuredImage}
-                  alt={info.title}
-                />
-                <h5 class="text-xl font-bold mb-2 text-gaming-primary hover:text-gaming-secondary">
-					<a href={`/post/${info.slug}`}>{info.title}</a>
-				</h5>
-                <p class="text-black-600 text-sm mb-4">{info.date}</p>
-                <div class="text-gray-700" set:html={info.excerpt}></div>
+              <img
+                class="w-full h-48 object-cover"
+                src={info.featuredImage}
+                alt={info.title}
+              />
+              <h5 class="text-xl font-bold mb-2 text-gaming-primary hover:text-gaming-secondary">
+                <a href={`/post/${info.slug}`}>{info.title}</a>
+              </h5>
+              <p class="text-black-600 text-sm mb-4">{info.date}</p>
+              <div class="text-gray-700" set:html={info.excerpt} />
             </article>
           </div>
         ))

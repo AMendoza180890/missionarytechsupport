@@ -21,8 +21,8 @@ console.log(storytelling.filter((item)=>item.data.slug === story).map((x)=> x.da
           .filter((item) => item.data.slug === story)
           .map((infoStory) => (
             <Heading>
-			    <h1 slot="heading-title" class="font-black h1">{infoStory.data.title}</h1>
-		    </Heading>
+			        <h1 slot="heading-title" class="font-black h1">{infoStory.data.title}</h1>
+		        </Heading>
 
             <div class="mx-auto max-w-3xl text-justify whitespace-pre-line">
                 <p>{infoStory.data.body}</p>
@@ -30,6 +30,7 @@ console.log(storytelling.filter((item)=>item.data.slug === story).map((x)=> x.da
           ))
       }
   </Section>
+  
   <Section
     class:list={"container pb-20 py-1 lg:py-1,pb-0,pt-0 flex justify-center"}
     id="contenedor"
