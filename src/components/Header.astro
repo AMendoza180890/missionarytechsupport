@@ -75,8 +75,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
             <a
               href={item.url}
               class={`transition font-semibold hover:text-brand-green ${
-                pathname === item.url ? "menu-item-active" : ""
-              }`}
+                pathname === item.url ? "menu-item-active" : ""} ${item.highlighted ? "button button-green" : "text-gray-700"
+              }`} target = {item.highlighted ? `"_blank"` : ""}
             >
               {item.name}
             </a>
@@ -98,7 +98,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
             <a
               href={item.url}
               @click="open = false"
-              class="block text-3xl font-semibold"
+              class={`block text-3xl font-semibold ${pathname === item.url ? "menu-item-active" : ""} ${item.highlighted ? "button button-green" : "text-gray-700"
+              }`} target = {item.highlighted ? `"_blank"` : ""}
             >
               {item.name}
             </a>
