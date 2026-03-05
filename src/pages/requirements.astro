@@ -5,379 +5,595 @@ import Newsletter from "~/components/Newsletter.astro";
 ---
 
 <Layout
-    title="Requirements"
-    pageTitle="Requirements"
-    description="This page contains a form to learn more about the requirements for your future project"
+  title="Requirements"
+  pageTitle="Requirements"
+  description="This page contains a form to learn more about the requirements for your future project"
 >
-    <Section class:list={"bg-white"}>
-        <section class="max-w-5xl mx-auto w-full">
+  <Section class:list={"bg-white"}>
+    <section class="max-w-5xl mx-auto w-full">
+      <div slot="hero-content-left" class="prose max-w-max max-lg:order-1 mb-8">
+        <h1 class="font-black">Requirements</h1>
+        <p>
+          We would like to know what you need for your project. Please complete
+          the following form and we will get in touch with you as soon as
+          possible. We look forward to hearing from you.
+        </p>
+      </div>
+
+      <form class="w-full max-w-full overflow-x-hidden">
+        <div class="w-full min-w-0 space-y-12">
+          <div class="border-b border-gray-900/10 pb-12">
+            <fieldset>
+              <h2 class="text-base/7 font-semibold text-gray-900">Website</h2>
+
+              <div
+                class="mt-10 grid w-full min-w-0 grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
+              >
+                <!-- Need help -->
+                <div class="sm:col-span-4 min-w-0">
+                  <label
+                    for="needhelp"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Do you need help with your website?
+                  </label>
+
+                  <div class="mt-2 relative w-full min-w-0">
+                    <select
+                      id="needhelp"
+                      name="needhelp"
+                      autocomplete="country-name"
+                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    >
+                      <option value="">Choose an option</option>
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                    </select>
+
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                    >
+                      <path
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Kind of help -->
+                <div class="sm:col-span-4 min-w-0">
+                  <label
+                    for="kindofhelp"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    What kind of help do you need?
+                  </label>
+
+                  <div class="mt-2 relative w-full min-w-0">
+                    <select
+                      id="kindofhelp"
+                      name="kindofhelp"
+                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    >
+                      <option value="">Choose an option</option>
+                      <option value="build">Build a new website</option>
+                      <option value="rebuild">Rebuild website</option>
+                      <option value="update">Update content</option>
+                    </select>
+
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                    >
+                      <path
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Has domain -->
+                <div class="sm:col-span-4 min-w-0">
+                  <label
+                    for="hasdomain"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Do you have a domain already?
+                  </label>
+
+                  <div class="mt-2 relative w-full min-w-0">
+                    <select
+                      id="hasdomain"
+                      name="hasdomain"
+                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    >
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      <option value="i dont know">I don't Know</option>
+                    </select>
+
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                    >
+                      <path
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Has host -->
+                <div class="sm:col-span-4 min-w-0">
+                  <label
+                    for="hashost"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Do you have a host?
+                  </label>
+
+                  <div class="mt-2 relative w-full min-w-0">
+                    <select
+                      id="hashost"
+                      name="hashost"
+                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    >
+                      <option value="yes">Yes</option>
+                      <option value="no">No</option>
+                      <option value="i dont know">I don't Know</option>
+                    </select>
+
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                    >
+                      <path
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Stock photo textarea -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="stockphoto"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Do you have photos to add or do you prefer stock photos?
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="stockphoto"
+                      name="stockphoto"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Logo file upload -->
+                <div class="col-span-full min-w-0">
+                  <label for="logo" class="block font-medium text-gray-700">
+                    If you have logo, please upload here:
+                  </label>
+
+                  <div
+                    class="mt-2 grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center"
+                  >
+                    <input
+                      id="logo"
+                      name="logo"
+                      type="file"
+                      class="sr-only"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+
+                    <label
+                      for="logo"
+                      class="inline-flex w-full cursor-pointer justify-center rounded-md bg-brand-green px-4 py-2 text-sm font-medium text-white hover:opacity-90 sm:w-auto"
+                    >
+                      Upload file
+                    </label>
+
+                    <p class="min-w-0 break-words text-sm text-gray-500">
+                      PDF, JPG, PNG (max 10MB)
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Color scheme -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="colorschema"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Add color scheme info here
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="colorschema"
+                      name="colorschema"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Font type -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="fonttype"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Preferred font type:
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="fonttype"
+                      name="fonttype"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Theme examples -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="theme"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Add example websites for theme:
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="theme"
+                      name="theme"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Type website -->
+                <div class="sm:col-span-4 min-w-0">
+                  <label
+                    for="typewebsite"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Do you prefer a landing page or separate pages for each
+                    section?
+                  </label>
+
+                  <div class="mt-2 relative w-full min-w-0">
+                    <select
+                      id="typewebsite"
+                      name="typewebsite"
+                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    >
+                      <option value="">Choose an option</option>
+                      <option value="landingPage">Landing Page</option>
+                      <option value="separatePages">Separete Pages</option>
+                    </select>
+
+                    <svg
+                      viewBox="0 0 16 16"
+                      fill="currentColor"
+                      data-slot="icon"
+                      aria-hidden="true"
+                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                    >
+                      <path
+                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                        clip-rule="evenodd"
+                        fill-rule="evenodd"></path>
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Menu tabs -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="infotab"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    What tabs do you want the menu bar to have?
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="infotab"
+                      name="infotab"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Functions -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="functionwebsite"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    What basic functions do you want your site to have?
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="functionwebsite"
+                      name="functionwebsite"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Script file upload -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="scriptweb"
+                    class="block font-medium text-gray-700"
+                  >
+                    If you have Script for the content, please upload here:
+                  </label>
+
+                  <div
+                    class="mt-2 grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center"
+                  >
+                    <input
+                      id="scriptweb"
+                      name="scriptweb"
+                      type="file"
+                      class="sr-only"
+                      accept=".pdf,.jpg,.jpeg,.png"
+                    />
+
+                    <label
+                      for="scriptweb"
+                      class="inline-flex w-full cursor-pointer justify-center rounded-md bg-brand-green px-4 py-2 text-sm font-medium text-white hover:opacity-90 sm:w-auto"
+                    >
+                      Upload file
+                    </label>
+
+                    <p class="min-w-0 break-words text-sm text-gray-500">
+                      PDF, JPG, PNG (max 10MB)
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Other support -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="othersupport"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Please list other general tech support needs here, if any
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="othersupport"
+                      name="othersupport"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <!-- Additional notes -->
+                <div class="col-span-full min-w-0">
+                  <label
+                    for="aditionalnotes"
+                    class="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Additional notes:
+                  </label>
+                  <div class="mt-2">
+                    <textarea
+                      id="aditionalnotes"
+                      name="aditionalnotes"
+                      rows="3"
+                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Photography & Storytelling -->
+          <div class="border-b border-gray-900/10 pb-12">
+            <h2 class="text-base/7 font-semibold text-gray-900">
+              Photography & Storytelling
+            </h2>
+
             <div
-                slot="hero-content-left"
-                class="prose max-w-max max-lg:order-1 mb-8"
+              class="mt-10 grid w-full min-w-0 grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
             >
-                <h1 class="font-black">Requirements</h1>
-                <p>
-                    We would like to know what you need for your project. Please
-                    complete the following form and we will get in touch with
-                    you as soon as possible. We look forward to hearing from
-                    you.
-                </p>
+              <div class="sm:col-span-3 min-w-0">
+                <label
+                  for="first-name"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >First name</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="first-name"
+                    type="text"
+                    name="first-name"
+                    autocomplete="given-name"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-3 min-w-0">
+                <label
+                  for="last-name"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >Last name</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="last-name"
+                    type="text"
+                    name="last-name"
+                    autocomplete="family-name"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-4 min-w-0">
+                <label
+                  for="email"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >Email address</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <!-- Country select (fixed like the others) -->
+              <div class="sm:col-span-3 min-w-0">
+                <label
+                  for="country"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >Country</label
+                >
+                <div class="mt-2 relative w-full min-w-0">
+                  <select
+                    id="country"
+                    name="country"
+                    autocomplete="country-name"
+                    class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  >
+                    <option>United States</option>
+                    <option>Canada</option>
+                    <option>Mexico</option>
+                  </select>
+
+                  <svg
+                    viewBox="0 0 16 16"
+                    fill="currentColor"
+                    data-slot="icon"
+                    aria-hidden="true"
+                    class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
+                  >
+                    <path
+                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
+                      clip-rule="evenodd"
+                      fill-rule="evenodd"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="col-span-full min-w-0">
+                <label
+                  for="street-address"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >Street address</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="street-address"
+                    type="text"
+                    name="street-address"
+                    autocomplete="street-address"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2 sm:col-start-1 min-w-0">
+                <label
+                  for="city"
+                  class="block text-sm/6 font-medium text-gray-900">City</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="city"
+                    type="text"
+                    name="city"
+                    autocomplete="address-level2"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2 min-w-0">
+                <label
+                  for="region"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >State / Province</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="region"
+                    type="text"
+                    name="region"
+                    autocomplete="address-level1"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
+
+              <div class="sm:col-span-2 min-w-0">
+                <label
+                  for="postal-code"
+                  class="block text-sm/6 font-medium text-gray-900"
+                  >ZIP / Postal code</label
+                >
+                <div class="mt-2">
+                  <input
+                    id="postal-code"
+                    type="text"
+                    name="postal-code"
+                    autocomplete="postal-code"
+                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
+                  />
+                </div>
+              </div>
             </div>
+          </div>
 
-            <form
-                action="/thank-you"
-                method="POST"
-                class="mt-8 flex flex-col gap-6 max-w-3xl border border-gray-200 p-6 md:p-8 rounded-xl shadow-sm bg-gray-50/50"
-                enctype="multipart/form-data"
+          <div class="mt-6 flex w-full items-center justify-end gap-x-6">
+            <button
+              type="submit"
+              class="rounded-md bg-brand-green px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
             >
-                <!-- 1. Domain -->
-                <div class="flex items-center gap-3">
-                    <label for="hasDomain" class="font-medium text-gray-700"
-                        >1. Do you have a domain already? (Yes/No)</label
-                    >
-                    <input
-                        type="checkbox"
-                        id="hasDomain"
-                        name="hasDomain"
-                        class="w-5 h-5 accent-brand-green"
-                    />
-                </div>
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </Section>
 
-                <!-- 2. Host -->
-                <div class="flex items-center gap-3">
-                    <label for="hasHost" class="font-medium text-gray-700"
-                        >2. Do you have a host? (Yes/No)</label
-                    >
-                    <input
-                        type="checkbox"
-                        id="hasHost"
-                        name="hasHost"
-                        class="w-5 h-5 accent-brand-green"
-                    />
-                </div>
-
-                <!-- 3. Photos -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="photosPreference"
-                        class="font-medium text-gray-700"
-                        >3. Do you have photos to add or do you prefer stock
-                        photos?</label
-                    >
-                    <input
-                        type="text"
-                        id="photosPreference"
-                        name="photosPreference"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    />
-                </div>
-
-                <!-- 4. Logo -->
-                <div class="flex flex-col gap-2">
-                    <label for="logoUpload" class="font-medium text-gray-700"
-                        >4. Upload logo here:</label
-                    >
-                    <input
-                        type="file"
-                        id="logoUpload"
-                        name="logoUpload"
-                        class="file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-green file:text-white hover:file:bg-green-700"
-                    />
-                </div>
-
-                <!-- 5. Color Scheme -->
-                <div class="flex flex-col gap-2">
-                    <label for="colorScheme" class="font-medium text-gray-700"
-                        >5. Add color scheme info here:</label
-                    >
-                    <textarea
-                        id="colorScheme"
-                        name="colorScheme"
-                        rows="3"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 6. Font Type -->
-                <div class="flex flex-col gap-2">
-                    <label for="fontType" class="font-medium text-gray-700"
-                        >6. Preferred font type:</label
-                    >
-                    <textarea
-                        id="fontType"
-                        name="fontType"
-                        rows="2"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 7. Example Websites -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="exampleWebsites"
-                        class="font-medium text-gray-700"
-                        >7. Add example websites for theme:</label
-                    >
-                    <input
-                        type="text"
-                        id="exampleWebsites"
-                        name="exampleWebsites"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    />
-                </div>
-
-                <!-- 8. Page Type Preference -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="pagePreference"
-                        class="font-medium text-gray-700"
-                        >8. Do you prefer a landing page or separate pages for
-                        each section?</label
-                    >
-                    <select
-                        id="pagePreference"
-                        name="pagePreference"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green bg-white"
-                    >
-                        <option value="" disabled selected
-                            >Select an option</option
-                        >
-                        <option value="landing_page">Landing Page</option>
-                        <option value="separate_pages">Separate Pages</option>
-                    </select>
-                </div>
-
-                <!-- 9. Menu Tabs -->
-                <div class="flex flex-col gap-2">
-                    <label for="menuTabs" class="font-medium text-gray-700"
-                        >9. What tabs do you want the menu bar to have?</label
-                    >
-                    <textarea
-                        id="menuTabs"
-                        name="menuTabs"
-                        rows="3"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 10. Basic Functions -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="basicFunctions"
-                        class="font-medium text-gray-700"
-                        >10. What basic functions do you want your site to have?</label
-                    >
-                    <textarea
-                        id="basicFunctions"
-                        name="basicFunctions"
-                        rows="3"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 12. Script Upload -->
-                <div class="flex flex-col gap-2">
-                    <label for="scriptUpload" class="font-medium text-gray-700"
-                        >12. If you have a script for the website, please attach
-                        here:</label
-                    >
-                    <input
-                        type="file"
-                        id="scriptUpload"
-                        name="scriptUpload"
-                        class="file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-brand-green file:text-white hover:file:bg-green-700"
-                    />
-                </div>
-
-                <!-- 13. General Tech Support Needs -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="techSupportNeeds"
-                        class="font-medium text-gray-700"
-                        >13. Please list other general tech support needs here,
-                        if any:</label
-                    >
-                    <textarea
-                        id="techSupportNeeds"
-                        name="techSupportNeeds"
-                        rows="3"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 14. Additional Notes -->
-                <div class="flex flex-col gap-2">
-                    <label
-                        for="additionalNotes"
-                        class="font-medium text-gray-700"
-                        >14. Additional notes:</label
-                    >
-                    <textarea
-                        id="additionalNotes"
-                        name="additionalNotes"
-                        rows="3"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green"
-                    ></textarea>
-                </div>
-
-                <!-- 15. Photo/Storytelling Support -->
-                <div class="flex items-center gap-3">
-                    <label
-                        for="needPhotoStory"
-                        class="font-medium text-gray-700"
-                        >15. Do you need Photo/storytelling support? (Yes/No)</label
-                    >
-                    <input
-                        type="checkbox"
-                        id="needPhotoStory"
-                        name="needPhotoStory"
-                        class="w-5 h-5 accent-brand-green"
-                    />
-                </div>
-
-                <!-- 16. Kind of Service -->
-                <div class="flex flex-col gap-2">
-                    <label for="serviceType" class="font-medium text-gray-700"
-                        >16. What kind of service?</label
-                    >
-                    <select
-                        id="serviceType"
-                        name="serviceType"
-                        class="border border-gray-300 rounded-md p-2 focus:ring-brand-green focus:border-brand-green bg-white"
-                    >
-                        <option value="" disabled selected
-                            >Select an option</option
-                        >
-                        <option value="photo">Photo</option>
-                        <option value="storytellings">Storytellings</option>
-                        <option value="both">Both</option>
-                    </select>
-                </div>
-
-                <!-- 17. Multiselect Photography -->
-                <div class="flex flex-col gap-2">
-                    <label class="font-medium text-gray-700"
-                        >17. If need photography, click all that apply:</label
-                    >
-                    <div class="flex flex-col gap-2 ml-4">
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="photographyNeed"
-                                value="specific_event"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">a. Specific event</span>
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="photographyNeed"
-                                value="candids"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700"
-                                >b. Candids of ministry</span
-                            >
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="photographyNeed"
-                                value="portraits"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700"
-                                >c. Portraits (staff, families, etc.)</span
-                            >
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="photographyNeed"
-                                value="facility"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">d. Facility</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- 18. Multiselect Storytelling -->
-                <div class="flex flex-col gap-2">
-                    <label class="font-medium text-gray-700"
-                        >18. If need storytelling, click all that apply:</label
-                    >
-                    <div class="flex flex-col gap-2 ml-4">
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="storytellingNeed"
-                                value="blog_updates"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">a. Blog updates</span>
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="storytellingNeed"
-                                value="newsletters"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">b. Newsletters</span>
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="storytellingNeed"
-                                value="interviewing"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700"
-                                >c. Interviewing for testimonials</span
-                            >
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="storytellingNeed"
-                                value="social_media"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">d. Social media</span>
-                        </label>
-                        <label class="flex items-center gap-2">
-                            <input
-                                type="checkbox"
-                                name="storytellingNeed"
-                                value="script"
-                                class="w-4 h-4 accent-brand-green"
-                            />
-                            <span class="text-gray-700">e. Script</span>
-                        </label>
-                    </div>
-                </div>
-
-                <div class="mt-8 flex justify-end">
-                    <button
-                        type="submit"
-                        class="bg-brand-green text-white px-8 py-3 rounded-md font-bold hover:bg-green-700 transition shadow-md"
-                        >Submit</button
-                    >
-                </div>
-            </form>
-        </section>
-    </Section>
-
-    <Section class:list={"container py-1 lg:py-1"} contain={false}>
-        <Newsletter />
-    </Section>
+  <Section class:list={"container py-1 lg:py-1"} contain={false}>
+    <Newsletter />
+  </Section>
 </Layout>
-
-<style>
-    .gridImg {
-        border: 1px solid white;
-        border-radius: 10px;
-    }
-</style>
