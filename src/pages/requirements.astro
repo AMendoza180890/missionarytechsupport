@@ -20,580 +20,378 @@ import Newsletter from "~/components/Newsletter.astro";
         </p>
       </div>
 
-      <form class="w-full max-w-full overflow-x-hidden">
-        <div class="w-full min-w-0 space-y-12">
-          <div class="border-b border-gray-900/10 pb-12">
-            <fieldset>
-              <h2 class="text-base/7 font-semibold text-gray-900">Website</h2>
+      <!-- formulario -->
+      <form action="#">
+        <div class="flex flex-col gap-8 mx-auto max-w-md">
 
-              <div
-                class="mt-10 grid w-full min-w-0 grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
-              >
-                <!-- Need help -->
-                <div class="sm:col-span-4 min-w-0">
-                  <label
-                    for="needhelp"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Do you need help with your website?
-                  </label>
+          <fieldset>
+            <legend>Information about the Organization</legend>
 
-                  <div class="mt-2 relative w-full min-w-0">
-                    <select
-                      id="needhelp"
-                      name="needhelp"
-                      autocomplete="country-name"
-                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    >
-                      <option value="">Choose an option</option>
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                    </select>
-
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                    >
-                      <path
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Kind of help -->
-                <div class="sm:col-span-4 min-w-0">
-                  <label
-                    for="kindofhelp"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    What kind of help do you need?
-                  </label>
-
-                  <div class="mt-2 relative w-full min-w-0">
-                    <select
-                      id="kindofhelp"
-                      name="kindofhelp"
-                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    >
-                      <option value="">Choose an option</option>
-                      <option value="build">Build a new website</option>
-                      <option value="rebuild">Rebuild website</option>
-                      <option value="update">Update content</option>
-                    </select>
-
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                    >
-                      <path
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Has domain -->
-                <div class="sm:col-span-4 min-w-0">
-                  <label
-                    for="hasdomain"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Do you have a domain already?
-                  </label>
-
-                  <div class="mt-2 relative w-full min-w-0">
-                    <select
-                      id="hasdomain"
-                      name="hasdomain"
-                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    >
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                      <option value="i dont know">I don't Know</option>
-                    </select>
-
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                    >
-                      <path
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Has host -->
-                <div class="sm:col-span-4 min-w-0">
-                  <label
-                    for="hashost"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Do you have a host?
-                  </label>
-
-                  <div class="mt-2 relative w-full min-w-0">
-                    <select
-                      id="hashost"
-                      name="hashost"
-                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    >
-                      <option value="yes">Yes</option>
-                      <option value="no">No</option>
-                      <option value="i dont know">I don't Know</option>
-                    </select>
-
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                    >
-                      <path
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Stock photo textarea -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="stockphoto"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Do you have photos to add or do you prefer stock photos?
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="stockphoto"
-                      name="stockphoto"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Logo file upload -->
-                <div class="col-span-full min-w-0">
-                  <label for="logo" class="block font-medium text-gray-700">
-                    If you have logo, please upload here:
-                  </label>
-
-                  <div
-                    class="mt-2 grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center"
-                  >
-                    <input
-                      id="logo"
-                      name="logo"
-                      type="file"
-                      class="sr-only"
-                      accept=".pdf,.jpg,.jpeg,.png"
-                    />
-
-                    <label
-                      for="logo"
-                      class="inline-flex w-full cursor-pointer justify-center rounded-md bg-brand-green px-4 py-2 text-sm font-medium text-white hover:opacity-90 sm:w-auto"
-                    >
-                      Upload file
-                    </label>
-
-                    <p class="min-w-0 break-words text-sm text-gray-500">
-                      PDF, JPG, PNG (max 10MB)
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Color scheme -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="colorschema"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Add color scheme info here
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="colorschema"
-                      name="colorschema"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Font type -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="fonttype"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Preferred font type:
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="fonttype"
-                      name="fonttype"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Theme examples -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="theme"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Add example websites for theme:
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="theme"
-                      name="theme"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Type website -->
-                <div class="sm:col-span-4 min-w-0">
-                  <label
-                    for="typewebsite"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Do you prefer a landing page or separate pages for each
-                    section?
-                  </label>
-
-                  <div class="mt-2 relative w-full min-w-0">
-                    <select
-                      id="typewebsite"
-                      name="typewebsite"
-                      class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    >
-                      <option value="">Choose an option</option>
-                      <option value="landingPage">Landing Page</option>
-                      <option value="separatePages">Separete Pages</option>
-                    </select>
-
-                    <svg
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      data-slot="icon"
-                      aria-hidden="true"
-                      class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                    >
-                      <path
-                        d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                        clip-rule="evenodd"
-                        fill-rule="evenodd"></path>
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Menu tabs -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="infotab"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    What tabs do you want the menu bar to have?
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="infotab"
-                      name="infotab"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Functions -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="functionwebsite"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    What basic functions do you want your site to have?
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="functionwebsite"
-                      name="functionwebsite"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Script file upload -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="scriptweb"
-                    class="block font-medium text-gray-700"
-                  >
-                    If you have Script for the content, please upload here:
-                  </label>
-
-                  <div
-                    class="mt-2 grid w-full min-w-0 grid-cols-1 gap-3 sm:grid-cols-[auto_minmax(0,1fr)] sm:items-center"
-                  >
-                    <input
-                      id="scriptweb"
-                      name="scriptweb"
-                      type="file"
-                      class="sr-only"
-                      accept=".pdf,.jpg,.jpeg,.png"
-                    />
-
-                    <label
-                      for="scriptweb"
-                      class="inline-flex w-full cursor-pointer justify-center rounded-md bg-brand-green px-4 py-2 text-sm font-medium text-white hover:opacity-90 sm:w-auto"
-                    >
-                      Upload file
-                    </label>
-
-                    <p class="min-w-0 break-words text-sm text-gray-500">
-                      PDF, JPG, PNG (max 10MB)
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Other support -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="othersupport"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Please list other general tech support needs here, if any
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="othersupport"
-                      name="othersupport"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-
-                <!-- Additional notes -->
-                <div class="col-span-full min-w-0">
-                  <label
-                    for="aditionalnotes"
-                    class="block text-sm/6 font-medium text-gray-900"
-                  >
-                    Additional notes:
-                  </label>
-                  <div class="mt-2">
-                    <textarea
-                      id="aditionalnotes"
-                      name="aditionalnotes"
-                      rows="3"
-                      class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-brand-green sm:text-sm/6"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-            </fieldset>
-          </div>
-
-          <!-- Photography & Storytelling -->
-          <div class="border-b border-gray-900/10 pb-12">
-            <h2 class="text-base/7 font-semibold text-gray-900">
-              Photography & Storytelling
-            </h2>
-
-            <div
-              class="mt-10 grid w-full min-w-0 grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6"
-            >
-              <div class="sm:col-span-3 min-w-0">
-                <label
-                  for="first-name"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >First name</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="first-name"
-                    type="text"
-                    name="first-name"
-                    autocomplete="given-name"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <div class="sm:col-span-3 min-w-0">
-                <label
-                  for="last-name"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >Last name</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="last-name"
-                    type="text"
-                    name="last-name"
-                    autocomplete="family-name"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <div class="sm:col-span-4 min-w-0">
-                <label
-                  for="email"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >Email address</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    autocomplete="email"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <!-- Country select (fixed like the others) -->
-              <div class="sm:col-span-3 min-w-0">
-                <label
-                  for="country"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >Country</label
-                >
-                <div class="mt-2 relative w-full min-w-0">
-                  <select
-                    id="country"
-                    name="country"
-                    autocomplete="country-name"
-                    class="block w-full appearance-none rounded-md bg-white py-1.5 pl-3 pr-10 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  >
-                    <option>United States</option>
-                    <option>Canada</option>
-                    <option>Mexico</option>
-                  </select>
-
-                  <svg
-                    viewBox="0 0 16 16"
-                    fill="currentColor"
-                    data-slot="icon"
-                    aria-hidden="true"
-                    class="pointer-events-none absolute right-2 top-1/2 size-5 -translate-y-1/2 text-gray-500 sm:size-4"
-                  >
-                    <path
-                      d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z"
-                      clip-rule="evenodd"
-                      fill-rule="evenodd"></path>
-                  </svg>
-                </div>
-              </div>
-
-              <div class="col-span-full min-w-0">
-                <label
-                  for="street-address"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >Street address</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="street-address"
-                    type="text"
-                    name="street-address"
-                    autocomplete="street-address"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <div class="sm:col-span-2 sm:col-start-1 min-w-0">
-                <label
-                  for="city"
-                  class="block text-sm/6 font-medium text-gray-900">City</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="city"
-                    type="text"
-                    name="city"
-                    autocomplete="address-level2"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <div class="sm:col-span-2 min-w-0">
-                <label
-                  for="region"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >State / Province</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="region"
-                    type="text"
-                    name="region"
-                    autocomplete="address-level1"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
-              </div>
-
-              <div class="sm:col-span-2 min-w-0">
-                <label
-                  for="postal-code"
-                  class="block text-sm/6 font-medium text-gray-900"
-                  >ZIP / Postal code</label
-                >
-                <div class="mt-2">
-                  <input
-                    id="postal-code"
-                    type="text"
-                    name="postal-code"
-                    autocomplete="postal-code"
-                    class="block w-full max-w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6"
-                  />
-                </div>
+            <div>
+              <label for="organization">Organization Name</label>
+              <div class="mt-2 grid grid-cols-1">
+                <input
+                  type="text"
+                  name="organization"
+                  id="organization"
+                  placeholder="Missionary Tech Support"
+                  required
+                />
               </div>
             </div>
-          </div>
 
-          <div class="mt-6 flex w-full items-center justify-end gap-x-6">
-            <button
-              type="submit"
-              class="rounded-md bg-brand-green px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-brand-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-green"
-            >
-              Submit
+            <div>
+              <label for="name">Name Contact</label>
+              <div class="mt-2 grid grid-cols-1">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Jhon Doe"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email">Email</label>
+              <div class="mt-2 grid grid-cols-1">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="example@gmail.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="phone">Phone</label>
+              <div class="mt-2 flex flex-col">
+                <input
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  placeholder="+0 000 000 000"
+                  required
+                />
+              </div>
+            </div>
+
+            <div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="whatsapp" id="whatsapp" required />
+                <label for="phone" class="!inline-block pl-5">WhatsApp is Available</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Website</legend>
+            <div>
+              <label for="needhelp">Do you need help with your website?</label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="needhelp"
+                  id="needhelp"
+                  required
+                >
+                  <option value="">choose an option</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="I dont know">I don't Know</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="typehelp">What kind of help do you need?</label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="typehelp"
+                  id="typehelp"
+                  required
+                >
+                  <option value="">choose an option</option>
+                  <option value="build">Build</option>
+                  <option value="rebuild">Rebuild</option>
+                  <option value="update">Update</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="hasdomain">Do you have a domain already?</label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="hasdomain"
+                  id="hasdomain"
+                  required
+                >
+                  <option value="">choose an option</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="i dont know">I don't know</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="hashost">Do you have a host?</label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="hashost"
+                  id="hashost"
+                  required
+                >
+                  <option value="">choose an option</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="i dont know">I don't know</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="stock"
+                >Do you have photos to add or do you prefer stock photos?</label
+              >
+              <div class="mt-2">
+                <input type="text" name="stock" id="stock" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="logo"
+                >If you have logo already, please upload here:</label
+              >
+              <div class="mt-2">
+                <input type="file" name="logo" id="logo" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="typography"
+                >If you have typography already, share here:</label
+              >
+              <div class="mt-2">
+                <textarea
+                  name="typography"
+                  id="typography"
+                  rows="4"
+                  required
+                  placeholder="Share the URLs of the fonts you use in your brand."
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <label for="color"
+                >If you have example websites for theme, please share link here:</label
+              >
+              <div class="mt-2">
+                <input type="text" name="color" id="color" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="typewebsite"
+                >Do you prefer a landing page or separate pages for each
+                section?
+              </label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="typewebsite"
+                  id="typewebsite"
+                >
+                  <option value="">choose an option</option>
+                  <option value="landingpage">LandingPage</option>
+                  <option value="separatepages">Separate Pages</option>
+                  <option value="i dont know">I don't know</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="menu"
+                >What tabs do you want the menu bar to have?
+              </label>
+              <div class="mt-2">
+                <textarea
+                  name="menu"
+                  id="menu"
+                  rows="4"
+                  required
+                  placeholder="Share order and name of tab what would you like to have your website"
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <label for="function"
+                >What basic functions do you want your site to have?
+              </label>
+              <div class="mt-2">
+                <textarea
+                  name="function"
+                  id="function"
+                  rows="4"
+                  required
+                  placeholder="for example, contact form, newsletter form, etc."
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <label for="script"
+                >If you have script already, please upload here:</label
+              >
+              <div class="mt-2">
+                <input type="file" name="script" id="script" required />
+              </div>
+            </div>
+
+            <div>
+              <label for="otherneeds"
+                >Please list other general tech support needs here, if any
+              </label>
+              <div class="mt-2">
+                <textarea
+                  name="otherneeds"
+                  id="otherneeds"
+                  rows="4"
+                  required
+                  placeholder="Like network, fix or maintenance computer, etc."
+                ></textarea>
+              </div>
+            </div>
+
+            <div>
+              <label for="message">Message</label>
+              <div class="mt-2">
+                <textarea
+                  name="message"
+                  id="message"
+                  rows="4"
+                  required
+                  placeholder="Let us know if you have any allergies, or have a specific table in mind"
+                ></textarea>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Photography & Storytelling</legend>
+
+            <div>
+              <label for="photoStory">Do you need Photo/storytelling support</label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="photoStory"
+                  id="photoStory"
+                  required
+                >
+                  <option value="">choose an option</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
+                  <option value="i dont know">I don't know</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="photoStory">What kind of service? </label>
+              <div class="mt-2">
+                <select
+                  class="w-full appearance-auto rounded-md bg-white py-4 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-brand-green sm:text-sm/6"
+                  name="photoStory"
+                  id="photoStory"
+                  required
+                >
+                  <option value="yes">Photo</option>
+                  <option value="no">Storytellings</option>
+                  <option value="i dont know">Both</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="pt-5">
+              <p class="font-bold">If need photography, click all that apply</p>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="event" id="event" required />
+                <label for="event" class="!inline-block pl-5">Specific Event</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="candids" id="candids" required />
+                <label for="candids" class="!inline-block pl-5">Candids of Ministry</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="portraits" id="portraits" required />
+                <label for="portraits" class="!inline-block pl-5">Portraits (staff, families, etc.)</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="facility" id="facility" required />
+                <label for="facility" class="!inline-block pl-5">Facility</label>
+              </div>
+            </div>
+
+            <div class="pt-5">
+              <p class="font-bold">If need photography, click all that apply</p>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="blog" id="blog" required />
+                <label for="blog" class="!inline-block pl-5">Blog Update</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="newsletter" id="newsletter" required />
+                <label for="newsletter" class="!inline-block pl-5">Newsletters</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="interviewing" id="interviewing" required />
+                <label for="interviewing" class="!inline-block pl-5">Interviewing for testimonials</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="media" id="media" required />
+                <label for="media" class="!inline-block pl-5">Social Media</label>
+              </div>
+              <div class="mt-2">
+                <input type="checkbox" class="!inline-block !w-auto" name="script" id="script" required />
+                <label for="script" class="!inline-block pl-5">Script</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <div>
+            <button type="submit" class="button button-green group px-8!">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5 -rotate-45 -mt-1 inline-block mr-1 group-hover:rotate-0 transition duration-300"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                ></path>
+              </svg>
+              Send
             </button>
           </div>
         </div>
       </form>
     </section>
-  </Section>
 
-  <Section class:list={"container py-1 lg:py-1"} contain={false}>
-    <Newsletter />
+    <Section class:list={"container py-1 lg:py-1"} contain={false}>
+      <Newsletter />
+    </Section>
   </Section>
 </Layout>

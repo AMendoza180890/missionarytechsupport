@@ -24,6 +24,7 @@
     "@vercel/routing-utils": "^4.0.0",
     "alpinejs": "^3.14.9",
     "astro": "^5.7.4",
+    "firebase": "^12.11.0",
     "glightbox": "^3.3.0",
     "masonry-layout": "^4.2.2",
     "react": "^19.2.0",
