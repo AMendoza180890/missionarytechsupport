@@ -13,9 +13,11 @@ export default defineConfig({
   base: "/",
 
   // trailingSlash: 'always',
-  integrations: [alpinejs(), playformInline({
-      Beasties: true,
-  }), mdx(), react()],
+  integrations: [
+    alpinejs(), 
+    // playformInline({Beasties: true,}), 
+    mdx(), 
+    react()],
 
   output: 'server',
   adapter: vercel(),
