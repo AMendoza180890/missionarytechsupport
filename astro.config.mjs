@@ -19,8 +19,16 @@ export default defineConfig({
     mdx(), 
     react()],
 
+  // Configuración de la imagen
+  image: {
+    domains: [],
+  },
+
   output: 'server',
-  adapter: vercel(),
+  adapter: vercel({
+    imageService: true,  // <-- activa el servicio de imágenes de Vercel
+  }),
+
   
   devToolbar: {
       enabled: false,
