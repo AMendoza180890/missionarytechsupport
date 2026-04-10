@@ -12,6 +12,7 @@
     "@astrojs/alpinejs": "^0.4.6",
     "@astrojs/mdx": "^4.2.4",
     "@astrojs/react": "^4.4.0",
+    "@astrojs/vercel": "^8.2.11",
     "@getbrevo/brevo": "^3.0.1",
     "@playform/inline": "^0.1.2",
     "@react-email/components": "^0.5.7",
@@ -35,7 +36,6 @@
     "vite": "^7.2.7"
   },
   "devDependencies": {
-    "@astrojs/vercel": "^8.2.11",
     "tailwindcss": "^4.1.17"
   }
 }
