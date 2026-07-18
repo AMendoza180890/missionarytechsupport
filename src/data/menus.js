@@ -29,11 +29,11 @@ export const menuMain = [
         url: "/support",
         highlighted: false,
     },
-    {
-        name: "Donate",
-        url: "https://www.givesendgo.com/missionarytechsupport",
-        highlighted: true,
-    },
+    // {
+    //     name: "Donate",
+    //     url: "https://www.givesendgo.com/missionarytechsupport",
+    //     highlighted: true,
+    // },
 ];
 
 export const footerPrimary = [
